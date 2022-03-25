@@ -1,4 +1,4 @@
-package Test;
+package Test.sales;
 
 public class SilverCustomer extends Customer {
 

@@ -1,4 +1,4 @@
-package Test;
+package Test.score;
 
 public class Scoring {
     public static void main(String[] args) {

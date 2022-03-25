@@ -1,4 +1,4 @@
-package Test;
+package Test.score;
 
 public class Student {
     String name ;
