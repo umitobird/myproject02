@@ -11,8 +11,6 @@ public class Tester {
         int choice1 = Integer.parseInt(scanner.next());
         System.out.println("Your destination? 1)Taipei 2)Taichung 3)Kouhsiung");
         int choice2 = Integer.parseInt(scanner.next());
-        System.out.println("Your ticket? 1)Adult 2)Concession");
-        int choice3 = Integer.parseInt(scanner.next());
         switch(choice1){
             case 1:
                 startstation = Station.TAIPEI_STATION;
@@ -33,14 +31,6 @@ public class Tester {
                 break;
             case 3:
                 destination = Station.KAOHSIUNG_STATION;
-                break;
-        }
-        switch(choice3){
-            case 1:
-                destination = Station.TAIPEI_STATION;
-                break;
-            case 2:
-                destination = Station.TAICHUNG_STATION;
                 break;
         }
         Ticket ticket = new Ticket(startstation, destination);
