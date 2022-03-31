@@ -11,6 +11,10 @@ public class Tester {
         int choice1 = Integer.parseInt(scanner.next());
         System.out.println("Your destination? 1)Taipei 2)Taichung 3)Kouhsiung");
         int choice2 = Integer.parseInt(scanner.next());
+//        System.out.println("Your ticket? 1)Adult 2)Concession");
+//        int choice3 = Integer.parseInt(scanner.next());
+//        System.out.println("How many? 1)1 2)2 3)3");
+//        int choice4 = Integer.parseInt(scanner.next());
         switch(choice1){
             case 1:
                 startstation = Station.TAIPEI_STATION;

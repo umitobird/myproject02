@@ -19,8 +19,9 @@ public class Ticket {
         return price;
     }
     public void print(){
-        System.out.println("起始站：" + startstation.id + "\t" + startstation.name
-                + "\n" + "終點站：" + destination.id + "\t" + destination.name
-                + "\n" + "價格："+ getPrice());
+        System.out.println("Startstation:" + startstation.id + "\t" + startstation.name
+                + "\n" + "Destination" + destination.id + "\t" + destination.name
+                + "\n" + "Amount:" + "\n" + "Type:"
+                + "\n" + "Price："+ getPrice());
     }
 }
