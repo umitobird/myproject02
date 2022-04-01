@@ -2,7 +2,7 @@ package Test.sales;
 
 public class Customer {
     String id;
-    int amount;
+    float amount;
     float off = 0.1f;
     public Customer(String id, int amount) {
         this.id = id;
