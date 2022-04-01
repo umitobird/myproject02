@@ -11,6 +11,6 @@ public class GraduateStudent extends Student {
     public void print(){
         System.out.println(name + "\t" + english
                 + "\t" + math + "\t"
-                + getAverage() + thesis);
+                + getAverage() + "\t"+ thesis);
     }
 }
