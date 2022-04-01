@@ -10,18 +10,28 @@ public class Ticket {
     public Ticket(Station startstation, Station destination){
         this.startstation = startstation;
         this.destination = destination;
-    }
-    public int getPrice() {
-        if (startstation == Station.TAIPEI_STATION ||
-                destination == Station.TAICHUNG_STATION){
-            this.price = 600;
+        if (startstation == Station.TAIPEI_STATION){
+            if (destination == Station.TAICHUNG_STATION)
+                this.price = 600;
+            if (destination == Station.KAOHSIUNG_STATION)
+                this.price = 1500;
         }
-        return price;
+        if (startstation == Station.TAICHUNG_STATION){
+            if (destination == Station.KAOHSIUNG_STATION)
+                this.price = 900;
+            if (destination == Station.TAIPEI_STATION)
+                this.price = 600;
+        }
+        if (startstation == Station.KAOHSIUNG_STATION){
+            if (destination == Station.TAIPEI_STATION)
+                this.price = 1500;
+            if (destination == Station.TAICHUNG_STATION)
+                this.price = 900;
+        }
     }
     public void print(){
         System.out.println("Startstation:" + startstation.id + "\t" + startstation.name
-                + "\n" + "Destination" + destination.id + "\t" + destination.name
-                + "\n" + "Amount:" + "\n" + "Type:"
-                + "\n" + "Price："+ getPrice());
+                + "\n" + "Destination:" + destination.id + "\t" + destination.name
+                + "\n" + "Price："+ price);
     }
 }
