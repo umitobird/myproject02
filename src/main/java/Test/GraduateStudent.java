@@ -1,4 +1,6 @@
-package Test.score;
+package Test;
+
+import Test.score.Student;
 
 public class GraduateStudent extends Student {
     int thesis;

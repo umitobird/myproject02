@@ -1,7 +1,14 @@
 package Test;
 
+import Test.score.Student;
+
+
 public class Hello {
     public static void main(String[] args) {
-        System.out.println("Hello World!");
+        int diff = Math.abs(100-300);
+        System.out.println(diff);
+        System.out.println("Hello world!");
+        Student stu = new Student();
+        System.out.println(stu.name);
     }
 }
