@@ -7,7 +7,7 @@ public class Runner {
     public static void main(String[] args) {
         String id = "ABC-1234";
         String entertime = "08:00";
-        String exitTime = "11:00";
+        String exitTime = "11:15";
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
         Date d = null;
 //      Exception例外處理 → try catch
@@ -31,25 +31,25 @@ public class Runner {
 
 //            3:14 → $90 , 3:15 → $120
 
-            if (mins < 195 ){
-                int fee2 = 90;
+            if (mins%60 < 15){
+                int fee2 = 30*(mins/60);
                 System.out.println("Fee2:"+fee2);
             }else{
-                int fee2 = 120;
+                int fee2 = 30*(mins/60+1);
                 System.out.println("Fee2:"+fee2);
             }
 
 //            3:15-3:30 → $105
 
-            if (mins < 195 ){
-                int fee3 = 90;
+            if (mins%60 < 15){
+                int fee3 = 30*(mins/60);
                 System.out.println("Fee3:"+fee3);
-            }else if (mins >= 195 && mins < 210 ){
-                int fee3 = 105;
+            }else if (mins%60 > 14 && mins%60 < 31 ){
+                int fee3 = 30*(mins/60)+15;
                 System.out.println("Fee3:"+fee3);
             }
             else{
-                int fee3 = 120;
+                int fee3 = 30*(mins/60+1);
                 System.out.println("Fee3:"+fee3);
             }
 
