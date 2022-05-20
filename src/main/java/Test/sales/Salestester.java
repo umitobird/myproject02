@@ -3,7 +3,7 @@ package Test.sales;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Saletaster {
+public class Salestester {
     public static void main(String[] args) {
         List<Customer> customers = new ArrayList<>();
         customers.add(new Customer("0001", 1200));
