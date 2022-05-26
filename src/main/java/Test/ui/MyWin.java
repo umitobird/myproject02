@@ -25,7 +25,7 @@ public class MyWin {
 //        MyActionListener listener = new MyActionListener();
 //        button.addActionListener(listener);
         //Layout
-        //frame.setLayout(new BorderLayout());
+        //frame.setLayout(new BorderLayout());//布局
         frame.setLayout(new FlowLayout());
         frame.add(new JButton("Testing"));
         frame.add(button);
