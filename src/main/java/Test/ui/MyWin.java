@@ -24,12 +24,11 @@ public class MyWin {
 //        });
         MyActionListener listener = new MyActionListener();
         button.addActionListener(listener);
-        //Layout
         //frame.setLayout(new BorderLayout());
         frame.setLayout(new FlowLayout());//布局
         frame.add(new JButton("Testing"));
         frame.add(button);
-
+//
         frame.setVisible(true);
         System.out.println("END?");
     }
