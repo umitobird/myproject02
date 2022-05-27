@@ -16,17 +16,17 @@ public class MyWin {
         //add Component
         JButton button = new JButton("OK");
         //匿名類別, Anonymous class
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("HA");
-            }
-        });
-//        MyActionListener listener = new MyActionListener();
-//        button.addActionListener(listener);
+//        button.addActionListener(new ActionListener() {
+//            @Override
+//            public void actionPerformed(ActionEvent e) {
+//                System.out.println("HA");
+//            }
+//        });
+        MyActionListener listener = new MyActionListener();
+        button.addActionListener(listener);
         //Layout
-        //frame.setLayout(new BorderLayout());//布局
-        frame.setLayout(new FlowLayout());
+        //frame.setLayout(new BorderLayout());
+        frame.setLayout(new FlowLayout());//布局
         frame.add(new JButton("Testing"));
         frame.add(button);
 
