@@ -10,10 +10,10 @@ import java.util.Scanner;
 public class GuessFrame extends JFrame {
     //Fields屬性
     JButton button = new JButton("GUESS");
-    JLabel label = new JLabel("Please Enter 1~10");
+    JLabel label = new JLabel("Please Enter 1~100");
     JTextField number = new JTextField(5);
     Random random = new Random();
-    int secret =random.nextInt(10)+1;
+    int secret =random.nextInt(100)+1;
     //Constructors建構子
     public GuessFrame(){
         super();
@@ -25,13 +25,14 @@ public class GuessFrame extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int num = Integer.parseInt(number.getText());
-                System.out.println(num);
+//                System.out.println(num);
                 if (num > secret){
                     label.setText("Smaller");
                 }else if(num < secret) {
                     label.setText("Bigger");
                 }else {
                     label.setText("Bingo,the number is " + secret);
+                    System.out.println("END");
                 }
             }
         });
