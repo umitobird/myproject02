@@ -8,10 +8,13 @@ import java.util.Random;
 
 public class Mytest extends JFrame {
     JButton button = new JButton("GUESS");
-    JLabel label = new JLabel("Please Enter 1~10");
+    JButton button1 = new JButton("CLEAR");
+    JButton answer = new JButton("ANSWER");
+    JLabel label = new JLabel("Please Enter 1~1000");
+    JLabel labela = new JLabel();
     JTextField number = new JTextField(5);
     Random random = new Random();
-    int secret =random.nextInt(10)+1;
+    int secret =random.nextInt(1000)+1;
     public static void main(String[] args) {
         Mytest Mytest = new Mytest();
     }
@@ -35,10 +38,25 @@ public class Mytest extends JFrame {
                 }
             }
         });
+        button1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                number.setText("");
+            }
+        });
+        answer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                labela.setText("The number is " + secret);
+            }
+        });
         setLayout(new FlowLayout());
+        add(label);
         add(number);
         add(button);
-        add(label);
+        add(button1);
+        add(answer);
+        add(labela);
         setVisible(true);
     }
 }
