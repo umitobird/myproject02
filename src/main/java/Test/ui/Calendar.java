@@ -86,6 +86,7 @@ public class Calendar extends JFrame {
                     date5.add(dates5[i]);
                 }
                 add(date5);
+                button2.setEnabled(false);//關閉按鈕
                 //重新生成
                 revalidate();
                 repaint();

@@ -16,7 +16,7 @@ public class ScoringFile {
 //            }
         try {
             FileReader fileReader = new FileReader("scores.txt");//throws
-            BufferedReader reader = new BufferedReader(fileReader);
+            BufferedReader reader = new BufferedReader(fileReader);//讀整行
             //Jack,85,35
             String line = reader.readLine();
             while(line != null){
@@ -29,8 +29,7 @@ public class ScoringFile {
                 student.print();
                 line = reader.readLine();
             }
-        }
-        catch (FileNotFoundException e){
+        }catch (FileNotFoundException e){
             System.out.println("檔案讀取失敗");
         }catch (IOException e){
             System.out.println("資料讀取失敗");

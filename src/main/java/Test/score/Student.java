@@ -9,7 +9,7 @@ public class Student implements Printable {
         this.name = name;
     }
     public Student(String name, int english, int math){
-        this.name = name;
+        this(name);//this.name = name;
         this.english = english;
         this.math = math;
     }
